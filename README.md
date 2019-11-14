@@ -2,7 +2,7 @@
 
 ## Por que trabalhar na Neuroteks
 
-A Neuroteks é uma startup que cria soluções e produtos integrando seu Automação de Processos e Inteligência Artificial com o negócio dos nossos clientes. Nossos softwares e projetos se baseiam no desenvolvimento de Bots de Automação, Ferramentas de Análise de Dados, REST API's, Mobile Apps, entre outros.
+A Neuroteks é uma startup que cria soluções e produtos integrando Automação de Processos e Inteligência Artificial com o negócio dos nossos clientes. Nossos softwares e projetos se baseiam no desenvolvimento de Bots de Automação, Ferramentas de Análise de Dados, REST API's, Mobile Apps, entre outros.
 
 Atuamos no desenvolvimento de produtos nos mais variados segmentos como Advocacia, Jurídico, Análises de Mídias Sociais, Telecomunicações, entre outros, em empresas de diversas áreas de atuação.
 
@@ -51,7 +51,7 @@ A cereja do bolo consiste na criação de um **CRAWLER** utilizando Selenium Web
 O Crawler deve ser capaz de consumir o serviço PHP com GET e obter todos os termos cadastrados para buscas. Após obter os termos, realizar as buscas no Google e então consumir novamente o serviço em PHP com POST para armazenando os links no banco de dados.
 Colete no máximo 5 links por busca. 
 
-Para ajudar na modelagem, considere um termo contendo apenas ID e Nome, e uma Busca contendo ID, ID do termo e link. 
+Para ajudar na modelagem, considere um Termo contendo apenas ID e Nome, e uma Busca contendo ID, ID do termo e link. 
 
 
 
