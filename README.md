@@ -1,96 +1,20 @@
-# Teste para desenvolvedor FullStack
+# Teste para desenvolvedor FullStack - Kelly Sandim Iwauchi
 
-## Por que trabalhar na Neuroteks
+Olá, primeiramente, gostaria de agradecer a oportunidade de participar da seletiva. Enfim, vamos a como usar esse código
 
-A Neuroteks é uma startup que cria soluções e produtos integrando Automação de Processos e Inteligência Artificial com o negócio dos nossos clientes. Nossos softwares e projetos se baseiam no desenvolvimento de Bots de Automação, Ferramentas de Análise de Dados, REST API's, Mobile Apps, entre outros.
+### **O que é necessário?**
 
-Atuamos no desenvolvimento de produtos nos mais variados segmentos como Advocacia, Jurídico, Análises de Mídias Sociais, Telecomunicações, entre outros, em empresas de diversas áreas de atuação.
+- Xampp instalado na máquina
+- Ter (a biblioteca?) WebDriver Manager instalada
 
-Quer conhecer mais sobre a empresa? <https://neuroteks.com/>
+### **Instruções de uso**
 
-## Sobre a vaga
+1. Colocar esse repositório dentro da pasta _xampp/htdocs/<nome da pasta onde ficarão esses arquivos>_
+2. Abrir o Xampp, ativar o Apache e o MySQL para poder abrir o PHPMyAdmin e criar um banco de dados chamado "bd_json" com as tabelas "busca" e "termo" (todas sem aspas, claro)
+3. O meu código não lê arquivos json, então caso queira mudar a entrada, terá de ir na pasta **server**, abrir o arquivo _recebe_json.php_ , ir na variável _$json_ e editar as entradas
+4. Depois, só abrir um navegador (o meu código está configurado para funcionar com o Google Chrome) e digitar _localhost/<nome da pasta onde ficarão esses arquivos>/server/recebe_json.php_ e deixar rodando. Ele fará o resto sozinho.
 
-Queremos um desenvolvedor fullstack para nos ajudar a inovar com soluções completas a nível de software e a manter o ciclo de demandas dos nossos atuais clientes. 
+### **Observações**
 
-O dia-a-dia do desenvolvedor será trabalhar junto com a equipe na elaboração e em melhorias de algumas rotinas dos sistemas.
-
-O desenvolvedor irá trabalhar em vários projetos de diferentes escopos, se você não se sente intimidado por novos desafios e adora se reinventar e usar a criatividade, então essa vaga é pra você.
-
-Os requisitos são:
-
-## Requisitos
-
-* Ter disponibilidade para trabalhar em Campo Grande/MS.
-* Ter excelente comunicação.
-* Conhecer metodologias ágeis.
-* Ter experiência nos seguintes itens:
-  * Linux Básico
-  * Bootstrap 4
-  * Javascript 
-  * PHP
-  * Python e Selenium
-  * MySQL 5
-* Diferenciais:
-  * SVN e Git
-  * REST API's
-  * Integração e Deploy contínuo
-  * TDD
-
-## Tecnologias para o desafio
-
-* PHP 
-* Python
-* MySQL 5
-
-## O Desafio
-
-Você deverá criar um **SERVIÇO** em PHP que permita receber um JSON contendo links de pesquisas no Google para um determinado Termo. Este serviço deverá então cadastrar a Busca em banco de dados. Cada Termo de Busca pode ter vários links associados. O serviço deve permitir também, consultar os termos cadastrados no banco de dados. 
-Faça a distinção pelo método da requisição (GET = Obter termos, POST = Cadastrar Buscas).
-Além disso, será necessária uma **VIEW** que exiba uma lista com todos os links cadastrados no banco de dados e seus respectivos termos. Essa view deve conter filtros por conteudo do termo e por conteudo do link. Não se preocupe com a estilização de menus e cabeçalhos, apenas utilize o Bootstrap, o Javascript e o PHP da melhor forma possível para exibir os filtros e a lista.
-A cereja do bolo consiste na criação de um **CRAWLER** utilizando Selenium Web Driver do Python. 
-O Crawler deve ser capaz de consumir o serviço PHP com GET e obter todos os termos cadastrados para buscas. Após obter os termos, realizar as buscas no Google e então consumir novamente o serviço em PHP com POST para armazenar os links no banco de dados.
-Colete no máximo 5 links por busca. 
-
-Para ajudar na modelagem, considere um Termo contendo apenas ID e Nome, e uma Busca contendo ID, ID do termo e link. 
-
-
-
-JSON de Entrada do Serviço
-
-```json
-{
-  "termo": "3"
-  "link": "https://www.devmedia.com.br/dominando-o-selenium-web-driver-na-pratica/34183"
-}
-```
-
-Retorno da consulta do Termos do Serviço
-
-```json
-[
-  {
-    "id": "3",
-    "nome": "Selenium Web Driver",
-  },
-  {
-    "id": "4",
-    "nome": "Dockerizando Python",
-  },
-  
-]
-```
-
-**É importante que as entradas sejam validadas**
-
-## Como devo entregar o desafio
-
-* Crie uma branch a partir da branch master deste respositório.
-* Implemente o código do desafio.
-* Faça um push de sua branch com o desafio implementado.
-* Crie um pull request para branch master.
-* Envie um email para (desenvolvimento@neuroteks.com) com o nome de sua branch informando que você concluiu o projeto.
-
-## Restou alguma dúvida
-
-Você pode enviar um email para: desenvolvimento@neuroteks.com
-Não exite em nos contatar!
+1.  No meu PHPMyAdmin, o usuário é root, e não há senha. Porém eu não sei se vocês já tem o Xampp instalado aí ou se o usuário ou a senha foram alterados. Caso sim, terão de alterar os arquivos _open_selenium.py_ , na linha 11, e _recebe_json.php_ na linha 38, ambos da pasta _server, e o arquivo _exibe_bd.php_ da pasta _view_, na linha 3.
+2. Apesar do meu código não ler um arquivo json já criado, ele é capaz de gerar um arquivo json com o resultado das pesquisas. Esse arquivo se chama _search_results.js_ e se encontra na pasta raíz logo após a execução do código.
