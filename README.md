@@ -10,7 +10,7 @@ Olá, primeiramente, gostaria de agradecer a oportunidade de participar da selet
 ### **Instruções de uso**
 
 1. Colocar esse repositório dentro da pasta _xampp/htdocs/<nome da pasta onde ficarão esses arquivos>_
-2. Abrir o Xampp, ativar o Apache e o MySQL para poder abrir o PHPMyAdmin e criar um banco de dados chamado "bd_json" com as tabelas "busca" e "termo" (todas sem aspas, claro)
+2. Abrir o Xampp, ativar o Apache e o MySQL para poder abrir o PHPMyAdmin e criar um banco de dados chamado "bd_json" com as tabelas "busca" e "termo" (todas sem aspas, claro). A tabela "busca" necessitará das colunas _id_, INT, que é a chave primária dessa tabela, _id_termo_, INT, que é uma chave estrangeira da tabela "termo", e _link_ que é um VARCHAR(200). A tabela "termo" tem as colunas _id_, INT, que é a chave primária dessa tabela, e _nome_, VARCHAR(150) que seria o termo a ser pesquisado.
 3. O meu código não lê arquivos json, então caso queira mudar a entrada, terá de ir na pasta **server**, abrir o arquivo _recebe_json.php_ , ir na variável _$json_ e editar as entradas
 4. Depois, só abrir um navegador (o meu código está configurado para funcionar com o Google Chrome) e digitar _localhost/<nome da pasta onde ficarão esses arquivos>/server/recebe_json.php_ e deixar rodando. Ele fará o resto sozinho.
 
